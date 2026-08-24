@@ -727,6 +727,20 @@ tfoot, .footnote {
   box-shadow: 0 0 20px rgba(255, 179, 71, 0.45);
 }
 
+.group-label {
+  font-size: 0.9rem;
+  color: var(--green-dim);
+  margin: -0.8rem 0 1rem;
+}
+
+#agents h3.group-label:first-of-type {
+  margin-top: 0;
+}
+
+.table-wrap table {
+  min-width: 760px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
