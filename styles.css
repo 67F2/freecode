@@ -120,6 +120,20 @@ a {
   text-shadow: none;
 }
 
+.topbar-links a.topbar-support {
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 0.02rem 0.45rem;
+}
+
+.topbar-links a.topbar-support:hover,
+.topbar-links a.topbar-support:focus-visible {
+  background: var(--amber);
+  color: #000;
+  box-shadow: 0 0 14px rgba(255, 179, 71, 0.4);
+  outline: none;
+}
+
 .hero {
   max-width: 900px;
   margin: 0 auto;
