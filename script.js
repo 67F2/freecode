@@ -1,15 +1,24 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const AGENT_COUNT = document.querySelectorAll(".card-grid .card").length;
+const agentCountEl = document.getElementById("agent-count");
+if (agentCountEl) agentCountEl.textContent = AGENT_COUNT;
+
 const phrases = [
   "AI agents that cost $0. Unlike your therapist.",
-  "Seven interns who never sleep and never ask for equity.",
-  "Free as in beer. Sometimes free as in speech.",
+  `${AGENT_COUNT} interns who never sleep and haven't asked for equity. Yet.`,
+  "Free as in beer and free as in speech, sometimes.",
   "Your code, written by something that never sighs at you.",
   "Now with 100% more free. Terms apply. There are no terms.",
-  "Cheaper than coffee. Worse at small talk.",
-  "It reads the error messages. Heroically.",
+  "Cheaper than your coffee habit. Worse at small talk. Same hours.",
+  "It reads the error messages you've been pretending not to see.",
   "Zero dollars. Zero judgment. Mild sass.",
-  "Side effects may include shipping on weekends."
+  "Side effects may include shipping on weekends.",
+  "Funded by free AI coding, Aussie electricity and one very patient support button.",
+  "Open source tools and the warm fuzzy feeling of creating something.",
+  "Imposter syndrome still costs extra. Nothing's perfect.",
+  "git commit -m 'the agents did it'",
+  "This line loops forever. Like your debugging."
 ];
 
 const typedEl = document.getElementById("typed");
