@@ -54,29 +54,6 @@ if (prefersReducedMotion) {
   typeLoop();
 }
 
-document.querySelectorAll(".copy-btn").forEach((btn) => {
-  btn.addEventListener("click", async () => {
-    const text = btn.parentElement.querySelector("code").textContent.trim();
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      ta.remove();
-    }
-    const original = btn.textContent;
-    btn.textContent = "copied!";
-    btn.classList.add("copied");
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.classList.remove("copied");
-    }, 1500);
-  });
-});
-
 const results = {
   gemini: {
     name: "Antigravity",
@@ -119,6 +96,18 @@ const results = {
     persona: "The One With Commercials",
     blurb: "No subscription, no API key, no credit card — tiny text ads pay for your inference instead. You're not the product; you're the audience.",
     anchor: "#freebuff"
+  },
+  jules: {
+    name: "Jules",
+    persona: "The Night-Shift Delegate",
+    blurb: "You delegate before bed; Google's cloud VM turns it into a pull request by morning. 15 tasks a day, free.",
+    anchor: "#jules"
+  },
+  qwen: {
+    name: "Qwen Code",
+    persona: "The Generous Stranger",
+    blurb: "Terminal agent with ~1,000 requests/day on Qwen3-Coder from a single OAuth login. The largest free daily allowance of any CLI.",
+    anchor: "#qwen"
   }
 };
 
@@ -140,7 +129,7 @@ quizForm.addEventListener("submit", (e) => {
   }
   quizError.hidden = true;
 
-  const scores = { gemini: 0, aider: 0, cline: 0, opencode: 0, codex: 0, copilot: 0, freebuff: 0 };
+  const scores = { gemini: 0, aider: 0, cline: 0, opencode: 0, codex: 0, copilot: 0, freebuff: 0, jules: 0, qwen: 0 };
   quizForm.querySelectorAll('input[type="radio"]:checked').forEach((input) => {
     input.value.split(",").forEach((pair) => {
       const [agent, points] = pair.split(":");
@@ -148,7 +137,7 @@ quizForm.addEventListener("submit", (e) => {
     });
   });
 
-  const priority = ["gemini", "aider", "cline", "codex", "opencode", "copilot", "freebuff"];
+  const priority = ["gemini", "aider", "cline", "qwen", "codex", "jules", "opencode", "copilot", "freebuff"];
   const winner = priority.reduce((best, key) =>
     scores[key] > scores[best] ? key : best
   , priority[0]);

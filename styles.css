@@ -400,50 +400,6 @@ section {
   text-align: right;
 }
 
-.install {
-  margin: 0 1rem 0.8rem;
-  display: flex;
-  align-items: stretch;
-  border: 1px solid var(--green-dim);
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.install code {
-  flex: 1;
-  padding: 0.5rem 0.7rem;
-  font-family: inherit;
-  font-size: 0.76rem;
-  color: var(--green-soft);
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.copy-btn {
-  font-family: inherit;
-  font-size: 0.72rem;
-  background: transparent;
-  color: var(--green-dim);
-  border: none;
-  border-left: 1px solid var(--green-dim);
-  padding: 0 0.8rem;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  white-space: nowrap;
-}
-
-.copy-btn:hover,
-.copy-btn:focus-visible {
-  background: var(--green);
-  color: #000;
-  outline: none;
-}
-
-.copy-btn.copied {
-  background: var(--amber);
-  color: #000;
-  border-color: var(--amber);
-}
-
 .card-link {
   margin: auto 1rem 1rem;
   font-size: 0.82rem;
