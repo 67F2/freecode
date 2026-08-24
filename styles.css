@@ -730,7 +730,7 @@ tfoot, .footnote {
 .group-label {
   font-size: 0.9rem;
   color: var(--green-dim);
-  margin: -0.8rem 0 1rem;
+  margin: 2.2rem 0 1rem;
 }
 
 #agents h3.group-label:first-of-type {
