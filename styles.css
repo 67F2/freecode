@@ -676,6 +676,43 @@ tfoot, .footnote {
   border: 0;
 }
 
+.comments-note {
+  max-width: 800px;
+  margin: -1rem auto 1.5rem;
+  font-size: 0.82rem;
+}
+
+.giscus-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#support {
+  text-align: center;
+}
+
+.support-line {
+  margin: 0.2rem 0;
+  color: #b9ffd2;
+  font-size: 0.95rem;
+}
+
+#support .btn-coffee {
+  margin: 1.2rem 0 0.8rem;
+}
+
+.btn-coffee {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.btn-coffee:hover,
+.btn-coffee:focus-visible {
+  background: var(--amber);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 179, 71, 0.45);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
